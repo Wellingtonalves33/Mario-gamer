@@ -66,8 +66,22 @@ position: absolute;
 width:250px;
 top: 100px;
 
-animation: clouds 10s infinite linear ;
+animation: clouds 50s infinite linear ;
 }
+.clouds1{
+    position: absolute;
+    width:250px;
+    top: 100px;
+    
+    animation: clouds 20s infinite linear ;
+    }
+    .clouds2{
+        position: absolute;
+        width:250px;
+        top: 100px;
+        
+        animation: clouds 30s infinite linear ;
+        }
 
 .mario{
     position: absolute;
@@ -88,6 +102,23 @@ animation: clouds 10s infinite linear ;
 /* amimaçoes */
 
 @keyframes clouds{
+    from{
+        right: -150px;
+
+    }
+    to{
+        right: 100%;
+    }
+}
+@keyframes clouds1{
+    from{
+        right: -150px;
+
+    }
+    to{
+        right: 100%;
+    }
+}@keyframes clouds2{
     from{
         right: -150px;
 
