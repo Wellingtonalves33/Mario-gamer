@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:#a37a7a;
+}
+.muro{
+    position:absolute ;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+.board{
+    width: 80%;
+    height: 500px;
+    border-bottom: 15px solid rgb(22, 144, 22);
+    margin: 30px auto;
+    background: linear-gradient(#87ceeb, #e0f6ff);
+    position: relative;
+    overflow: hidden;
+}
+.restart{
+top: 20px;
+    padding: 10px 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+button{
+   
+    position: relative;
+    font-size: 1.2em;
+    padding: 0.7em 1.4em;
+    background-color: #BF0426;
+    border: none;
+    border-radius: 0.5em;
+    color: #DEDEDE;
+box-shadow:  0.5em 0.5em 0.5em #0000004d;
+}
+button::before{
+position: absolute;
+content: '';
+height: 0;
+width: 0;
+top: 0;
+left: 0;
+background: linear-gradient(135deg, #212121 0%, #212121 50%, #96041f 50%, #bf0426 60%);
+border-radius: 0 0 0.5em 0;
+box-shadow: 0.2em 0.2em #0000004d;
+transition: 0.3s;
+} 
+button:hover::before{
+    width: 1.6em;
+    height: 1.6em;
+}
+button:active{
+    box-shadow:  0.2em 0.2em 0.3em #0000004d;
+    transform: translate(0.1em, 0.1em);
+}
+
+.clouds{
+position: absolute;
+width:250px;
+top: 100px;
+
+animation: clouds 10s infinite linear ;
+}
+
+.mario{
+    position: absolute;
+    bottom: 0;
+    width: 120px;
+  
+}
+.jump{
+    animation: mario 500ms linear;
+}
+.pipe{
+    position: absolute;
+    bottom: 0;
+    width: 50px;
+    animation: pipe 1000ms infinite ease-out;
+}
+
+/* amimaçoes */
+
+@keyframes clouds{
+    from{
+        right: -150px;
+
+    }
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes pipe{
+    from{
+        right: -80px;
+
+    }
+    to{
+        right: 100%;
+    }
+}
+@keyframes mario{
+   0%{
+    bottom: 0;
+   }
+   40%{
+    bottom:120px ;
+   }
+   50%{
+    bottom:120px ;
+   }
+   60%{
+    bottom:120px ;
+   }
+100%{
+    bottom: 0;
+}
+
+}
