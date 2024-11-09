@@ -103,7 +103,7 @@ animation: clouds 50s infinite linear ;
 
 @keyframes clouds{
     from{
-        right: -150px;
+        right: -350px;
 
     }
     to{
@@ -112,7 +112,7 @@ animation: clouds 50s infinite linear ;
 }
 @keyframes clouds1{
     from{
-        right: -150px;
+        right: -550px;
 
     }
     to{
