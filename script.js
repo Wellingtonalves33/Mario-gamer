@@ -2,6 +2,9 @@
 const pipe  = document.querySelector(".pipe")
 const mario = document.querySelector(".mario")
 const restart = document.querySelector(".restart")
+const buttonJump = document.querySelector(".button-jump")
+
+
 
 const jump = () =>{
 mario.classList.add("jump")
@@ -36,4 +39,5 @@ if (pipePosition <= 100 && pipePosition > 0 && marioPosition < 80 ){
 restart.addEventListener("click", () => {
     location.reload(true)
 })
+buttonJump.addEventListener("click", jump)
 document.addEventListener("keydown", jump)

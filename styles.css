@@ -29,7 +29,7 @@ top: 20px;
     display: flex;
     justify-content: center;
 }
-button{
+.restart{
    
     position: relative;
     font-size: 1.2em;
@@ -40,7 +40,7 @@ button{
     color: #DEDEDE;
 box-shadow:  0.5em 0.5em 0.5em #0000004d;
 }
-button::before{
+.restart::before{
 position: absolute;
 content: '';
 height: 0;
@@ -52,11 +52,11 @@ border-radius: 0 0 0.5em 0;
 box-shadow: 0.2em 0.2em #0000004d;
 transition: 0.3s;
 } 
-button:hover::before{
+.restart:hover::before{
     width: 1.6em;
     height: 1.6em;
 }
-button:active{
+.restart:active{
     box-shadow:  0.2em 0.2em 0.3em #0000004d;
     transform: translate(0.1em, 0.1em);
 }
@@ -96,9 +96,20 @@ animation: clouds 50s infinite linear ;
     position: absolute;
     bottom: 0;
     width: 50px;
-    animation: pipe 1000ms infinite ease-out;
+    animation: pipe 900ms infinite ease-out;
 }
+.button-jump{
+    top: 20px;
+    color: #fff;
+    background-color: red;
+    margin: 20px auto;
+    padding: 10px 30px;
+    display: flex;
+    border: none;
+    border-radius: 20px;
+  
 
+}
 /* amimaçoes */
 
 @keyframes clouds{
@@ -142,16 +153,17 @@ animation: clouds 50s infinite linear ;
     bottom: 0;
    }
    40%{
-    bottom:120px ;
+    bottom:140px ;
    }
    50%{
-    bottom:120px ;
+    bottom:140px ;
    }
    60%{
-    bottom:120px ;
+    bottom:140px ;
    }
 100%{
     bottom: 0;
 }
 
 }
+
