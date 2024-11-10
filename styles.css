@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 body{
+    width: 100vw;
+    height: 100vh;
     background-color:#a37a7a;
 }
 .muro{
@@ -96,7 +98,7 @@ animation: clouds 50s infinite linear ;
     position: absolute;
     bottom: 0;
     width: 50px;
-    animation: pipe 900ms infinite ease-out;
+    animation: pipe 1000ms infinite ease-out;
 }
 .button-jump{
     top: 20px;
@@ -107,8 +109,37 @@ animation: clouds 50s infinite linear ;
     display: flex;
     border: none;
     border-radius: 20px;
-  
-
+}
+.button-jump{
+   
+    position: relative;
+    font-size: 1.2em;
+    padding: 0.7em 1.4em;
+    background-color: #BF0426;
+    border: none;
+    border-radius: 0.5em;
+    color: #DEDEDE;
+box-shadow:  0.5em 0.5em 0.5em #0000004d;
+}
+.button-jump::before{
+position: absolute;
+content: '';
+height: 0;
+width: 0;
+top: 0;
+left: 0;
+background: linear-gradient(135deg, #212121 0%, #212121 50%, #96041f 50%, #bf0426 60%);
+border-radius: 0 0 0.5em 0;
+box-shadow: 0.2em 0.2em #0000004d;
+transition: 0.3s;
+} 
+.button-jump:hover::before{
+    width: 1.6em;
+    height: 1.6em;
+}
+.button-jump:active{
+    box-shadow:  0.2em 0.2em 0.3em #0000004d;
+    transform: translate(0.1em, 0.1em);
 }
 /* amimaçoes */
 
@@ -153,17 +184,54 @@ animation: clouds 50s infinite linear ;
     bottom: 0;
    }
    40%{
-    bottom:140px ;
+    bottom:160px ;
    }
    50%{
-    bottom:140px ;
+    bottom:160px ;
    }
    60%{
-    bottom:140px ;
+    bottom:160px ;
    }
 100%{
     bottom: 0;
 }
 
 }
+@media screen and  (max-width: 500px){
+    .board{
+        width: 89%;
+        height: 450px;
+    }
+    .pipe{
+        width: 40px;
+        animation: pipe 900ms infinite ease-out;
+    }
+    .button-jump{ 
+        position: fixed;
+        top: 500px;
+        left: 245px;
+        font-size: 25px;
+        padding: 20px 30px;
+    }
+
+    .restart{
+            position: fixed;
+            top: 520px;
+            left: 20px;
+            font-size: 25px;
+         
+        }
+        .muro{
+            position:fixed ;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+        }
+        .containe-pai{
+            display: grid;
+            gap: 10px;
+        }
+}
+    
+
 
